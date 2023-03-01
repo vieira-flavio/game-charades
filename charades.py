@@ -1,18 +1,21 @@
 import random
 playerList = []
 print("\n Welcome to Charades!!!\n")
-userAsk = str(input("Shall we begin (y/n)? "))
+userAsk = str(input("\n Shall we begin (y/n)?"))
 if userAsk == "y" :
     # Players = input("Insert Players\n")
     userNun=int(input("Number of players?\n> "))
     while len(playerList) != userNun:
         userNames=input("Please input name of player number {}/{}\n> ".format(len(playerList)+1, userNun))
         playerList.append(userNames)
+elif userAsk == "n":
+    print("\n Goodbye \n")
+    exit()
+ 
     # random.shuffle(playerList)
     # print("\nRandomizing list..:",playerList)
 # print("\nIt's your turn:" , random.choice(playerList))
 playerIndex = 0
-    
 while True:
     WORDS = ["airplane", "boat", "baby", "Phone", "Toothbrush", "Hammer", "Shoelaces", "Flashlight", "Clown", "Mime", "Whale", "Kangaroo", "Monkey", "Rooster", "Cockroach", "Bartender", "Cow", "Bullfighter", "Yard sale", "Penguin"]
     PHRASES = ["Willy Wonka", "Buzz Lightyear", "Rod Stewart", "Lady Gaga", "Britney Spears", "Michael Jackson", "Doctor Evil"]
