@@ -1,18 +1,24 @@
+# Modules:
 import random
-playerList = []
+# Welcoming str and asking player if they want to start playing.
 print("\n Welcome to Charades!!!\n")
 userAsk = str(input("\n Shall we begin (y/n)?"))
-if userAsk == "y" :
+# List of players:
+playerList = []
+# Player answers y to begin playing:
+if userAsk == "y":
     userNun=int(input("\n Number of players?\n> "))
     while len(playerList) != userNun:
         userNames=input("Please input name of player number {}/{}\n> ".format(len(playerList)+1, userNun))
         playerList.append(userNames)
+# Player answers n to begin game:
 elif userAsk == "n":
     print("\n\n Goodbye \n")
     exit()
-    
-    # random.shuffle(playerList)
-    # print("\nRandomizing list..:",playerList)
+# Player enters other input:   
+else:
+     print("\n Want to try that again? I've got all day. y / n? \n")
+
 # print("\nIt's your turn:" , random.choice(playerList))
 playerIndex = 0
 while True:
