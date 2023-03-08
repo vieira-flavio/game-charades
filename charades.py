@@ -3,15 +3,14 @@ playerList = []
 print("\n Welcome to Charades!!!\n")
 userAsk = str(input("\n Shall we begin (y/n)?"))
 if userAsk == "y" :
-    # Players = input("Insert Players\n")
-    userNun=int(input("Number of players?\n> "))
+    userNun=int(input("\n Number of players?\n> "))
     while len(playerList) != userNun:
         userNames=input("Please input name of player number {}/{}\n> ".format(len(playerList)+1, userNun))
         playerList.append(userNames)
 elif userAsk == "n":
-    print("\n Goodbye \n")
+    print("\n\n Goodbye \n")
     exit()
- 
+    
     # random.shuffle(playerList)
     # print("\nRandomizing list..:",playerList)
 # print("\nIt's your turn:" , random.choice(playerList))
@@ -22,11 +21,11 @@ while True:
     word = random.choice(WORDS)
     correct = word
     jumble = ""
-    print("\nIt's your turn:" ) 
-    print(playerList[playerIndex])
-    print("\nThe word / phrase to act out is:\n\n", word.title())
     
-    guess = input("\nWho guessed this correctly? ")
+    print("\n", playerList[playerIndex], "It's your turn:") 
+    print("\n The word / phrase to act out is:\n\n", word.title())
+    
+    guess = input("\n Who guessed this correctly? ")
     playerIndex = (playerIndex+1) % len(playerList)
     
     # print("\nWould you like to play again? Y or N")
