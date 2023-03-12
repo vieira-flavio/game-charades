@@ -28,13 +28,7 @@ elif answer == "2":
      print("\nAwesome!", charades_version_list[1]," it is!")
 
 
-
-
-
-
-
-
-user_ask_start = (input("\n Are you ready (y/n)?"))
+user_ask_start = (input("\nAre you ready (y/n)?"))
 
 
 # Player answers y to begin playing:
