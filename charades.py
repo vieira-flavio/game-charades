@@ -1,13 +1,9 @@
-# Modules:
 import random
 
-# Global variables:
-
-# strings:
 user_ask_start = "Shall we begin (y/n)?"
 
-# lists:
-charades_version_list = ['PG', 'R-RATED']
+WORDS = ["airplane", "boat", "baby", "Phone", "Toothbrush", "Hammer", "Shoelaces", "Flashlight", "Clown", "Mime", "Whale", "Kangaroo", "Monkey", "Rooster", "Cockroach", "Bartender", "Cow", "Bullfighter", "Yard sale", "Penguin"]
+charades_version_list = ['PG', 'Adult']
 playerList = []
 
 # Welcoming user and listing version of Charades user wants to play.
@@ -41,29 +37,10 @@ elif user_ask_start == "n":
 
 playerIndex = 0
 while True:
-    WORDS = ["airplane", "boat", "baby", "Phone", "Toothbrush", "Hammer", "Shoelaces", "Flashlight", "Clown", "Mime", "Whale", "Kangaroo", "Monkey", "Rooster", "Cockroach", "Bartender", "Cow", "Bullfighter", "Yard sale", "Penguin"]
-    PHRASES = ["Willy Wonka", "Buzz Lightyear", "Rod Stewart", "Lady Gaga", "Britney Spears", "Michael Jackson", "Doctor Evil"]
     word = random.choice(WORDS)
-    correct = word
-    jumble = ""
-    
-    print(f"\n {playerList[playerIndex]}, it's your turn:") 
-    print(f"\n The word / phrase to act out is:\n\n{word.title()}")
-    
-
+    print(f"\n {playerList[playerIndex]}, it's your turn:")
+    print(f"\n The word / phrase to act out is:\n\n {word.title()}")
     guess = input("\n Who guessed this correctly? ")
     playerIndex = (playerIndex+1) % len(playerList)
-    
-    # print("\nWould you like to play again? Y or N")
-    while True:
-            answer = str(input('\nWould you like to play again? (y/n): '))
-            if answer in ('y', 'n'):
-                break
-            print("invalid input.")
-    if answer == 'y':
-        continue
-    else:
-        print("Goodbye")
-        break
 
-input("\n\nPress the enter key to exit")
+
