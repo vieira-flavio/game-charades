@@ -29,8 +29,6 @@ if user_ask_start == "y":
     while len(playerList) != userNun:
         userNames=input(f"Please input name of player {len(playerList)+1}/{userNun} :\n")
         playerList.append(userNames)
-
-# Player answers n to begin game:
 elif user_ask_start == "n":
     print("\n\n Goodbye \n")
     exit()
@@ -42,5 +40,7 @@ while True:
     print(f"\n The word / phrase to act out is:\n\n {word.title()}")
     guess = input("\n Who guessed this correctly? ")
     playerIndex = (playerIndex+1) % len(playerList)
+
+
 
 
